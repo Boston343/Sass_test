@@ -1,0 +1,20 @@
+// mixins - allow you to basically create and use functions
+// can use them with custom parameters too
+@mixin flexCenter($direction, $background) {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background-color: $background;
+}
+
+header {
+    // Use the mixin
+    @include flexCenter(row, lightblue);
+    height: 500px;
+}
+
+.button-height {
+    height: 100px;
+}

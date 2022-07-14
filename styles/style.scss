@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./headers";
+
+main {
+    color: $textColor;
+}
+
+.contact {
+    @include flexCenter(column, rgb(248, 130, 246));
+    color: $textColor;
+
+    // calculations also work
+    width: 100%-20%;
+    button {
+        // extending allows inheritance
+        @extend .button-height;
+        background-color: $primaryBtn;
+        &:hover {
+            background-color: blue;
+        }
+    }
+}
